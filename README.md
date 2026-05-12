@@ -1,117 +1,36 @@
-# Gabriel Correia — Mini Site Premium
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Landing page estática (1 página) para curadoria de perfumes e vinhos.
-Paleta: preto & dourado. Stack: HTML + CSS + JS vanilla, sem build.
+## Getting Started
 
----
+First, run the development server:
 
-## Estrutura de arquivos
-
-```
-Site Gabriel Correia/
-├── index.html
-├── styles.css
-├── script.js
-├── README.md
-├── fotos/              ← fotos originais (não publicar, apenas referência)
-└── assets/
-    └── gabriel/        ← coloque aqui as imagens do site (ver abaixo)
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 1. Colocar as imagens
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Copie os arquivos da pasta `fotos/` para `assets/gabriel/` com os nomes abaixo:
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-| Arquivo original | Destino esperado pelo site |
-|---|---|
-| `fotos/IMG_1635.JPG` | `assets/gabriel/IMG_1635.jpg` |
-| `fotos/IMG_1632.JPG` | `assets/gabriel/IMG_1632.jpg` |
-| `fotos/IMG_1626.JPG` | `assets/gabriel/IMG_1626.jpg` |
-| `fotos/IMG_1634.JPG` | `assets/gabriel/IMG_1634.jpg` |
+## Learn More
 
-> **Atenção no Windows:** o servidor local e hospedagens Linux são sensíveis a maiúsculas/minúsculas.
-> Renomeie os arquivos para letras minúsculas no destino (`.jpg`, não `.JPG`).
+To learn more about Next.js, take a look at the following resources:
 
----
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## 2. Editar os textos principais
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-Todos os textos estão diretamente no `index.html`, organizados por seção com comentários:
+## Deploy on Vercel
 
-```html
-<!-- (1) HERO -->
-<!-- (2) ATALHOS -->
-<!-- (3) RECOMENDAÇÕES -->
-...
-```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Abra o arquivo em qualquer editor (VS Code, Notepad++) e localize a seção pelo comentário.
-
----
-
-## 3. Atualizar as recomendações da semana
-
-Os 6 cards da seção **Recomendações** são gerados pelo JavaScript.
-Edite o array `recommendations` no início de `script.js`:
-
-```js
-const recommendations = [
-  {
-    tag: 'Perfume',          // 'Perfume' ou 'Vinho'
-    nome: 'Nome do produto', // texto exibido como título do card
-    porQueVale: 'Frase curta de curadoria.',
-    href: '#'                // substituir pelo link real quando disponível
-  },
-  // ... mais itens
-];
-```
-
-- Mantenha sempre 6 itens (3 Perfume + 3 Vinho) para o grid ficar equilibrado.
-- Quando o `href` for `'#'`, o botão exibe "(link em breve)" automaticamente.
-- Quando o `href` for um link real, ele abre em nova aba com `rel="noopener"`.
-
----
-
-## 4. Substituir os links "em breve"
-
-Busque por `href="#"` no `index.html` para localizar todos os links placeholder.
-Há também os botões de WhatsApp e Instagram no Hero e na seção Contato — basta substituir `href="#"` pela URL real.
-
-Exemplo:
-```html
-<!-- Antes -->
-<a href="#" class="btn btn-outline">WhatsApp <small>(link em breve)</small></a>
-
-<!-- Depois -->
-<a href="https://wa.me/5511999999999" class="btn btn-outline" target="_blank" rel="noopener">WhatsApp</a>
-```
-
----
-
-## 5. Publicar (deploy estático)
-
-O site é 100% estático — basta fazer upload da pasta raiz para qualquer host:
-
-- **Netlify / Vercel**: arraste a pasta ou conecte ao repositório Git.
-- **GitHub Pages**: faça push para um repositório e ative Pages na branch `main`.
-- **Hostinger / cPanel**: upload por FTP, aponte o domínio para a pasta.
-
-Não há servidor, banco de dados nem processo de build necessário.
-
----
-
-## 6. Paleta de cores (referência rápida)
-
-| Variável | Valor | Uso |
-|---|---|---|
-| `--bg` | `#0B0B0F` | Fundo principal |
-| `--panel` | `#111118` | Fundo de cards e seções alternadas |
-| `--text` | `#F5F5F7` | Texto principal |
-| `--muted` | `#B9BAC6` | Texto secundário |
-| `--gold` | `#D4AF37` | Dourado principal |
-| `--goldSoft` | `#F2D77C` | Dourado suave (gradientes) |
-| `--line` | `rgba(212,175,55,.18)` | Bordas e divisores |
-
-Para alterar a identidade visual, edite as variáveis no bloco `:root` no início de `styles.css`.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
