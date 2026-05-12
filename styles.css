@@ -401,8 +401,8 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   .hero-image   { order: 2; }
 
   .hero-img-frame {
-    max-width: 300px;
-    aspect-ratio: 4 / 5;
+    max-width: 100%;
+    aspect-ratio: 3 / 4;
   }
 
   .hero-text { max-width: 100%; }
@@ -667,9 +667,9 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   }
 
   .split-img-frame {
-    max-width: 340px;
+    max-width: 100%;
     margin: 0 auto;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 4;
   }
 }
 
@@ -805,9 +805,9 @@ h3 { font-size: 1.05rem; font-weight: 600; }
   }
 
   .sobre-img-frame {
-    max-width: 300px;
+    max-width: 100%;
     margin: 0 auto;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 4;
   }
 }
 
