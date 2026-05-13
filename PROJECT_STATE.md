@@ -3,40 +3,40 @@
 Este arquivo serve como **ponto da verdade (Single Source of Truth)** para manter o contexto perfeitamente alinhado entre desenvolvedores humanos, o Claude Code (VS Code) e o Antigravity (Gemini).
 
 ## 🚀 Visão Geral
-*   **Projeto:** Plataforma de Consultoria e Curadoria de Alta Perfumaria
-*   **Objetivo:** Transformar a antiga landing page em um Web App Premium com design luxuoso, performance otimizada na Vercel e foco em conversão para consultoria olfativa.
-*   **Referência Estética:** transformandofaces.com.br (Black/Gold, Layout Editorial, Assemétrico)
+*   **Projeto:** Mídia Kit / Portfólio Comercial B2B de Alta Perfumaria.
+*   **Objetivo:** Posicionar Gabriel Correia como a principal autoridade (Especialista + Influenciador) para atrair parcerias comerciais com marcas de luxo. Transição do foco B2C (consultoria) para foco B2B (associação de marcas e campanhas).
+*   **Referência Estética:** Nível editorial premium (Dior, Tom Ford, GQ). Design focado em "Blackout" com respiros profundos e interações elegantes.
 
 ## 🛠️ Stack Tecnológica
 *   **Framework:** Next.js 16.2.6 (App Router)
-*   **Estilização:** Tailwind CSS v4 (Cores: `black-900`, `gold-500`)
-*   **Animações:** Framer Motion (Scroll animations, Parallax, Glassmorphism)
-*   **Ícones:** Lucide React v1.14.0 (Atenção: versão 1.x não possui ícones de redes sociais, usar SVGs inline).
+*   **Estilização:** Tailwind CSS v4
+*   **Animações:** Framer Motion (Scroll animations, AnimatePresence, Hover Effects)
+*   **Ícones:** Lucide React v1.14.0 (Atenção: SVGs inline para redes sociais).
 *   **Hospedagem:** Vercel (CI/CD via branch `main`)
 
-## 🎨 Decisões de Design (UI/UX)
-*   **Cores:** Fundo escuro absoluto (`#050505`) com contrastes em dourado elegante (`#D4AF37`).
+## 🎨 Decisões de Design (UI/UX - Estrutura 10/10)
+*   **Cores:** Fundo escuro absoluto (Blackout - `bg-black` puro e `bg-black-950`) com toques cirúrgicos de luxo em dourado (`gold-500` e `gold-400`).
+*   **Botões e Conversão:** Para garantir o contraste máximo de luxo, botões primários usam `bg-gold-500` com texto preto (`text-black`) e uma sombra glow suave. Botões secundários possuem hover dourado na borda.
 *   **Tipografia:** `Playfair Display` para Títulos Serifados (Sofisticação) e `Inter` para leitura Sans-serif.
-*   **Navegação:** `One-Page` suave (Smooth Scroll) utilizando Header Fixo com efeito de vidro (*Glassmorphism*).
+*   **Layout Fotográfico:** O Hero section utiliza um **Split Layout (Tela Dividida)** no desktop para exibir o slider dinâmico (`AnimatePresence`) dentro de um contêiner `aspect-[4/5]`. Isso foi decidido para evitar definitivamente o corte das fotos em formato retrato (portrait) em monitores de PC. No fundo da tela, a imagem é espelhada com um desfoque (blur) massivo de 100px para criar o ambiente.
 
 ## ✅ O que já foi implementado (Última Sessão)
-1.  **Limpeza de Repositório:** Otimização da pasta `public/fotos/`. Apenas imagens estritamente necessárias estão no repo para evitar *timeout* no build da Vercel (cerca de 5~6 imagens em uso).
-2.  **Layout Editorial e Dinâmico (`src/app/page.tsx`):**
-    *   **Header:** Fixo, responsivo (Menu Hambúrguer mobile), navegação via âncoras.
-    *   **Hero Section:** Fundo dinâmico com fumaça/spray de perfume (`IMG_1626`), tipografia grandiosa e foto do Gabriel (`IMG_1677`).
-    *   **Galeria Fragmentada (A Coleção):** Blocos assimétricos (*masonry*) com animações de *hover*.
-    *   **Correção de Enquadramento:** A seção "Obras Primas" (`IMG_1640`) foi adaptada para um *Split Layout* (metade texto, metade imagem 3:4/4:5) para evitar cortes na cabeça na imagem vertical.
-    *   **Seção de Filosofia:** Criada usando a `IMG_1594` (Gabriel de terno bege escurecida), focando na citação de autoridade.
-    *   **Seção de Atendimento (Call-to-Action):** Bloco escuro com *glow* dourado no fundo focado em agendamento da Consultoria.
-    *   **Rodapé Institucional (Footer):** Multi-colunas com logo, mapa do site, contatos sociais. Ícone do Instagram feito em **SVG inline** (devido à remoção do Lucide v1.x).
+1.  **Pivot B2C -> B2B:** Refatoração completa da cópia e narrativa do site. Saíram os blocos de consultoria, entraram blocos de prospecção e autoridade de marca.
+2.  **Hero Dinâmico:** Carrossel infinito de imagens em crossfade.
+3.  **Barra de Autoridade:** Criação de bloco direto com números (Ex: +1000 perfumes, +2M Views) totalmente em dourado.
+4.  **Blocos Editoriais e B2B:**
+    *   **Identidade e Sensações:** Textos espaçados enfatizando a conexão emocional do perfume.
+    *   **Cards de Uso:** Grid elegante descrevendo os momentos (Balada, Luxo, Encontros).
+    *   **Bloco Comercial B2B:** Seção dedicada com checklist de serviços (Publis, Lançamentos, Embaixador).
+    *   **Dossiê de Coleção:** Focado em marcas High-End (Creed, Xerjoff, Dior) e mercado Árabe/Descontinuados, aumentando a percepção de conhecedor profundo.
+5.  **SEO Oculto:** O rodapé (footer) totalmente preto abriga um extenso bloco de texto cinza bem escuro otimizado para dezenas de palavras-chave, sem quebrar a estética premium.
 
 ## 🚧 Próximos Passos (To-Do)
-*   [ ] Inserir os links definitivos nas âncoras do WhatsApp e Instagram.
-*   [ ] Implementar sistema de CMS ou envio de formulário para os agendamentos (opcional, se não for usar WhatsApp direto).
-*   [ ] Verificar Core Web Vitals (Lighthouse) para garantir pontuação > 90 de performance no mobile.
-*   [ ] Adicionar metadados avançados de SEO na Home (`layout.tsx`) como *OpenGraph images* e *schema.org*.
+*   [ ] O usuário precisa subir as novas fotos com temática **"Cinematográfica e Terno Escuro"** na pasta `public/fotos/` e apenas substituir os nomes no array `heroImages` e nas tags `<Image>` (linhas ~28, ~245, ~262 de `page.tsx`).
+*   [ ] Inserir os links definitivos nas âncoras do WhatsApp e Instagram nos botões "Falar com Assessoria" e "Associar Minha Marca".
+*   [ ] Verificar Core Web Vitals (Lighthouse) para garantir a melhor performance na Vercel.
 
 ## 🚨 Avisos Importantes (Para os Agentes IA)
-1.  **Não usar pacotes grandes para ícones sociais:** Manter SVGs em linha na interface. `lucide-react` atual é V1+.
-2.  **Não suba imagens "raw":** As imagens de alta resolução originais causaram o erro de timeout no upload da Vercel. Caso necessite adicionar mais imagens, compacte-as primeiro.
-3.  **Não remova o `"use client"` da Home:** A Home (`page.tsx`) é amplamente dependente dos hooks do `framer-motion` (`useScroll`, `useTransform`).
+1.  **Não adicionar muitas cores ou cards "comuns":** A identidade é *Blackout Editorial*. Muito texto e imagem grande, zero elementos de Dashboard ou landing pages de marketing agressivo.
+2.  **Não usar `object-cover` em contêiner `w-full h-screen` com fotos retrato:** Lembre-se do problema de corte. Se adicionar novas fotos retrato, coloque-as em contêineres de aspecto `3/4` ou `4/5`.
+3.  **Não remova o `"use client"` da Home:** A Home (`page.tsx`) depende profundamente do `framer-motion`.
