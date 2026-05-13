@@ -139,33 +139,33 @@ export default function Home() {
       </header>
 
       {/* --- 1. HERO SECTION DINÂMICO --- */}
-      <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden bg-black-950">
-        <motion.div style={{ scale: bgScale }} className="absolute inset-0 w-full h-full">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black-950 pt-32 pb-16">
+        {/* Background Blurred Image */}
+        <motion.div style={{ scale: bgScale }} className="absolute inset-0 w-full h-full opacity-10 blur-[100px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentImageIndex}
-              initial={{ opacity: 0, scale: 1.05 }}
-              animate={{ opacity: 0.6, scale: 1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 1.5, ease: "easeInOut" }}
               className="absolute inset-0 w-full h-full"
             >
               <Image
                 src={heroImages[currentImageIndex]}
-                alt="Gabriel Correia"
+                alt="Background"
                 fill
                 priority
-                className="object-cover object-top grayscale-[30%] brightness-75"
+                className="object-cover"
               />
             </motion.div>
           </AnimatePresence>
-          {/* Gradient Overlay Profundo */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black-950 via-black-950/60 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black-950 via-transparent to-transparent opacity-80" />
         </motion.div>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-start mt-20">
-          <motion.div style={{ y: heroY }} className="max-w-3xl">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-8 mt-4 md:mt-0">
+          
+          {/* Esquerda: Textos e CTAs */}
+          <motion.div style={{ y: heroY }} className="w-full md:w-6/12 flex flex-col items-start text-left z-10">
             <motion.span 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -179,7 +179,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-serif text-4xl md:text-6xl lg:text-7xl text-white leading-[1.1] tracking-tight mb-8"
+              className="font-serif text-4xl md:text-5xl lg:text-7xl text-white leading-[1.1] tracking-tight mb-8"
             >
               Especialista em perfumes e referência em fragrâncias que criam presença.
             </motion.h1>
@@ -197,16 +197,45 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-6"
+              className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto"
             >
-              <a href="#parcerias" onClick={(e) => scrollToSection(e, "#parcerias")} className="group flex items-center justify-center gap-3 px-8 py-4 bg-white text-black-950 uppercase tracking-widest text-xs font-semibold hover:bg-gray-200 transition-colors">
+              <a href="#parcerias" onClick={(e) => scrollToSection(e, "#parcerias")} className="group flex items-center justify-center gap-3 px-8 py-4 bg-white text-black-950 uppercase tracking-widest text-xs font-semibold hover:bg-gray-200 transition-colors w-full sm:w-auto">
                 Associar Minha Marca <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#parcerias" onClick={(e) => scrollToSection(e, "#parcerias")} className="group flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 text-white uppercase tracking-widest text-xs font-semibold hover:border-white transition-colors">
+              <a href="#parcerias" onClick={(e) => scrollToSection(e, "#parcerias")} className="group flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 text-white uppercase tracking-widest text-xs font-semibold hover:border-white transition-colors w-full sm:w-auto">
                 Falar com Assessoria
               </a>
             </motion.div>
           </motion.div>
+
+          {/* Direita: Imagem Dinâmica */}
+          <motion.div 
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2, delay: 0.4 }}
+            className="w-full md:w-5/12 relative aspect-[4/5] md:aspect-[3/4] overflow-hidden border border-white/10 shadow-[0_0_80px_rgba(212,175,55,0.05)]"
+          >
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentImageIndex}
+                initial={{ opacity: 0, scale: 1.05 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
+                className="absolute inset-0 w-full h-full"
+              >
+                <Image
+                  src={heroImages[currentImageIndex]}
+                  alt="Gabriel Correia"
+                  fill
+                  priority
+                  className="object-cover object-center grayscale-[10%]"
+                />
+              </motion.div>
+            </AnimatePresence>
+            <div className="absolute inset-0 bg-gradient-to-t from-black-950/40 via-transparent to-transparent" />
+          </motion.div>
+
         </div>
       </section>
 
