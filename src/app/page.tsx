@@ -73,10 +73,10 @@ export default function Home() {
   };
 
   return (
-    <main ref={containerRef} className="bg-black-950 min-h-screen text-gray-200 font-sans selection:bg-gold-500/30 selection:text-white">
+    <main ref={containerRef} className="bg-black min-h-screen text-gray-200 font-sans selection:bg-gold-500/30 selection:text-white">
       
       {/* --- HEADER --- */}
-      <header className="fixed top-0 w-full z-50 bg-black-950/80 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
+      <header className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
         <div className="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
           <Link href="#" onClick={(e) => scrollToSection(e, "#hero")} className="font-serif text-2xl tracking-tighter text-white z-50">
             GC<span className="text-gold-500">.</span>
@@ -96,7 +96,7 @@ export default function Home() {
             <a 
               href="#parcerias" 
               onClick={(e) => scrollToSection(e, "#parcerias")}
-              className="px-6 py-2.5 bg-white text-black-950 uppercase tracking-widest text-xs font-semibold hover:bg-gray-200 transition-colors"
+              className="px-6 py-2.5 bg-white text-black uppercase tracking-widest text-xs font-semibold hover:bg-gray-200 transition-colors"
             >
               Contato Comercial
             </a>
@@ -114,7 +114,7 @@ export default function Home() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="absolute top-0 left-0 w-full h-screen bg-black-950 z-40 flex flex-col items-center justify-center gap-8 px-6"
+              className="absolute top-0 left-0 w-full h-screen bg-black z-40 flex flex-col items-center justify-center gap-8 px-6"
             >
               {navLinks.map((link) => (
                 <a 
@@ -129,7 +129,7 @@ export default function Home() {
               <a 
                 href="#parcerias"
                 onClick={(e) => scrollToSection(e, "#parcerias")}
-                className="mt-8 px-8 py-4 bg-white text-black-950 uppercase tracking-widest text-sm font-semibold w-full text-center"
+                className="mt-8 px-8 py-4 bg-white text-black uppercase tracking-widest text-sm font-semibold w-full text-center"
               >
                 Contato Comercial
               </a>
@@ -139,7 +139,7 @@ export default function Home() {
       </header>
 
       {/* --- 1. HERO SECTION DINÂMICO --- */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black-950 pt-32 pb-16">
+      <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-32 pb-16">
         {/* Background Blurred Image */}
         <motion.div style={{ scale: bgScale }} className="absolute inset-0 w-full h-full opacity-10 blur-[100px]">
           <AnimatePresence mode="wait">
@@ -199,7 +199,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto"
             >
-              <a href="#parcerias" onClick={(e) => scrollToSection(e, "#parcerias")} className="group flex items-center justify-center gap-3 px-8 py-4 bg-white text-black-950 uppercase tracking-widest text-xs font-semibold hover:bg-gray-200 transition-colors w-full sm:w-auto">
+              <a href="#parcerias" onClick={(e) => scrollToSection(e, "#parcerias")} className="group flex items-center justify-center gap-3 px-8 py-4 bg-white text-black uppercase tracking-widest text-xs font-semibold hover:bg-gray-200 transition-colors w-full sm:w-auto">
                 Associar Minha Marca <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
               <a href="#parcerias" onClick={(e) => scrollToSection(e, "#parcerias")} className="group flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 text-white uppercase tracking-widest text-xs font-semibold hover:border-white transition-colors w-full sm:w-auto">
@@ -240,7 +240,7 @@ export default function Home() {
       </section>
 
       {/* --- 2. BARRA DE AUTORIDADE --- */}
-      <section className="relative z-20 bg-black-950 border-t border-b border-white/5 py-12">
+      <section className="relative z-20 bg-black border-t border-b border-white/5 py-12">
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center divide-x-0 md:divide-x divide-white/5">
           <div className="flex flex-col items-center justify-center">
             <span className="text-3xl md:text-4xl font-serif text-white mb-2">+1000</span>
@@ -289,7 +289,7 @@ export default function Home() {
       </section>
 
       {/* --- 4. EXPERIÊNCIA SENSORIAL (CARDS) --- */}
-      <section className="relative z-20 bg-black-950 py-32 px-6 md:px-12 border-t border-white/5">
+      <section className="relative z-20 bg-black py-32 px-6 md:px-12 border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
             <span className="text-gold-500 tracking-[0.3em] text-xs uppercase mb-6 block">A Ciência da Avaliação</span>
@@ -362,7 +362,7 @@ export default function Home() {
               ))}
             </div>
 
-            <a href="#parcerias" onClick={(e) => scrollToSection(e, "#parcerias")} className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black-950 uppercase tracking-widest text-xs font-semibold hover:bg-gray-200 transition-colors self-start">
+            <a href="#parcerias" onClick={(e) => scrollToSection(e, "#parcerias")} className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black uppercase tracking-widest text-xs font-semibold hover:bg-gray-200 transition-colors self-start">
               Falar com Assessoria <ArrowRight size={16} />
             </a>
           </motion.div>
@@ -427,7 +427,7 @@ export default function Home() {
       </section>
 
       {/* --- 7. INFLUÊNCIA --- */}
-      <section className="relative z-20 bg-black-950 py-32 px-6 md:px-12 border-t border-white/5 text-center">
+      <section className="relative z-20 bg-black py-32 px-6 md:px-12 border-t border-white/5 text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl md:text-5xl text-white mb-8">Influência construída com autenticidade.</h2>
           <p className="text-gray-400 font-light leading-relaxed mb-12 text-base md:text-lg">
