@@ -210,82 +210,71 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
+          <div className="flex flex-col gap-32">
             
-            {/* ITEM 1 - Asymmetric Large */}
+            {/* Pilar 1: Perfumaria de Nicho */}
             <motion.div 
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
-              className="md:col-span-7 group cursor-pointer"
+              className="flex flex-col md:flex-row items-center gap-12 md:gap-24"
             >
-              <div className="relative aspect-[4/5] overflow-hidden bg-black-900 border border-white/5">
-                <Image
-                  src="/fotos/IMG_1625.JPG"
-                  alt="Perfume Assinatura"
-                  fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:opacity-80"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="w-full md:w-5/12 relative aspect-[4/5] bg-black-800 border border-white/5 overflow-hidden group">
+                <Image src="/fotos/IMG_1625.JPG" alt="Perfumaria de Nicho" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
               </div>
-              <div className="mt-6 flex justify-between items-center">
-                <div>
-                  <h3 className="font-serif text-2xl text-white group-hover:text-gold-500 transition-colors">Assinatura</h3>
-                  <p className="text-gray-500 font-sans text-sm mt-1">Presença marcante</p>
-                </div>
-                <ArrowRight className="text-white/30 group-hover:text-gold-500 transition-colors transform group-hover:translate-x-2" />
-              </div>
-            </motion.div>
-
-            {/* ITEM 2 - Asymmetric Small, Pushed Down */}
-            <motion.div 
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="md:col-span-5 md:mt-48 group cursor-pointer"
-            >
-              <div className="relative aspect-[3/4] overflow-hidden bg-black-900 border border-white/5">
-                <Image
-                  src="/fotos/IMG_1605.JPG"
-                  alt="Perfume Noturno"
-                  fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:opacity-80"
-                />
-              </div>
-              <div className="mt-6 flex justify-between items-center">
-                <div>
-                  <h3 className="font-serif text-xl text-white group-hover:text-gold-500 transition-colors">Noite & Encontros</h3>
-                  <p className="text-gray-500 font-sans text-sm mt-1">Intensidade e mistério</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* ITEM 3 - FIX: Split Layout to avoid cropping portrait image */}
-            <motion.div 
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8 }}
-              className="md:col-span-12 mt-32 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
-            >
-              <div className="order-2 md:order-1 flex flex-col items-start pr-0 md:pr-12">
-                <h3 className="font-serif text-3xl md:text-5xl text-white mb-6">Os Mais Disputados</h3>
-                <p className="text-gray-400 font-sans font-light leading-relaxed mb-8">
-                  Meu acervo privado com o que há de mais exclusivo no mundo. Fragrâncias raras, ingredientes absolutos e edições limitadas que poucos têm acesso.
+              <div className="w-full md:w-7/12 flex flex-col">
+                <h3 className="font-serif text-3xl md:text-4xl text-white mb-6">A Perfumaria de Nicho vs. Comercial</h3>
+                <p className="text-gray-400 font-light leading-relaxed mb-6 text-sm md:text-base">
+                  O mercado tradicional de perfumaria é feito para agradar as massas. É um jogo de números, onde a mesma fórmula genérica é engarrafada aos milhões. A perfumaria de nicho, por outro lado, é arte pura. São criações feitas sem restrições de orçamento ou pesquisas de mercado.
                 </p>
-                <a href="#parcerias" onClick={(e) => scrollToSection(e, "#parcerias")} className="flex items-center gap-4 text-gold-500 uppercase tracking-widest text-sm hover:gap-6 transition-all group">
-                  Ver Acervo Completo <ArrowRight size={16} className="group-hover:text-white transition-colors" />
-                </a>
+                <p className="text-gray-400 font-light leading-relaxed text-sm md:text-base">
+                  Meu foco está em fragrâncias criadas com matérias-primas raras, absolutos florais genuínos e madeiras envelhecidas. Quando você usa um perfume de nicho, você não está apenas cheirando bem; você está contando uma história que 99% das pessoas na sala nunca ouviram. É isso que cria uma assinatura indelével.
+                </p>
               </div>
-              <div className="order-1 md:order-2 relative aspect-[3/4] md:aspect-[4/5] overflow-hidden bg-black-800 border border-white/5 group">
-                <Image
-                  src="/fotos/IMG_1640.JPG"
-                  alt="Perfume Premium Obras Primas"
-                  fill
-                  className="object-cover object-top transition-transform duration-1000 group-hover:scale-105"
-                />
+            </motion.div>
+
+            {/* Pilar 2: Frascos Raros */}
+            <motion.div 
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8 }}
+              className="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-24"
+            >
+              <div className="w-full md:w-5/12 relative aspect-[3/4] bg-black-800 border border-white/5 overflow-hidden group">
+                <Image src="/fotos/IMG_1605.JPG" alt="Relíquias e Frascos Raros" fill className="object-cover transition-transform duration-1000 group-hover:scale-105" />
+              </div>
+              <div className="w-full md:w-7/12 flex flex-col">
+                <h3 className="font-serif text-3xl md:text-4xl text-white mb-6">Relíquias e Frascos Descontinuados</h3>
+                <p className="text-gray-400 font-light leading-relaxed mb-6 text-sm md:text-base">
+                  Uma coleção de verdade não se constrói apenas comprando o que está na prateleira hoje. Ela é feita de caça a tesouros. Ao longo dos anos, reuni mais de 1000 fragrâncias, entre elas, peças que o dinheiro, por si só, não consegue mais comprar.
+                </p>
+                <p className="text-gray-400 font-light leading-relaxed text-sm md:text-base">
+                  São frascos descontinuados, formulações vintage originais (antes das restrições da indústria) e edições limitadas numeradas. Possuir e entender essas relíquias me permite analisar os lançamentos atuais com uma profundidade histórica que poucos possuem.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Pilar 3: Curadoria Seletiva */}
+            <motion.div 
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8 }}
+              className="flex flex-col md:flex-row items-center gap-12 md:gap-24"
+            >
+              <div className="w-full md:w-5/12 relative aspect-[4/5] bg-black-800 border border-white/5 overflow-hidden group">
+                <Image src="/fotos/IMG_1640.JPG" alt="Curadoria Seletiva" fill className="object-cover object-top transition-transform duration-1000 group-hover:scale-105" />
+              </div>
+              <div className="w-full md:w-7/12 flex flex-col">
+                <h3 className="font-serif text-3xl md:text-4xl text-white mb-6">O Rigor da Avaliação</h3>
+                <p className="text-gray-400 font-light leading-relaxed mb-6 text-sm md:text-base">
+                  Para que um frasco entre no meu acervo definitivo e seja recomendado, ele passa por uma avaliação brutal. Não me deixo levar por frascos bonitos ou marcas de grife famosas. O líquido dentro da garrafa é o único juiz.
+                </p>
+                <p className="text-gray-400 font-light leading-relaxed text-sm md:text-base">
+                  Analiso a evolução das notas na pele durante horas, a performance em diferentes climas, o nível de projeção e a intenção do mestre perfumista. Se um perfume entra na minha lista de indicações, é porque ele tem o poder comprovado de transformar o estado de espírito de quem o veste.
+                </p>
               </div>
             </motion.div>
 
@@ -376,6 +365,56 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* --- 4.5. A ANATOMIA DA AVALIAÇÃO E VISÃO B2B --- */}
+      <section id="metodo" className="relative z-20 bg-black-900 py-32 px-6 md:px-12 border-t border-white/5">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 md:gap-24">
+          
+          {/* Anatomia */}
+          <div className="w-full md:w-1/2 flex flex-col">
+            <span className="flex items-center gap-4 text-gold-500 tracking-[0.3em] text-xs uppercase mb-8">
+              <span className="w-8 h-[1px] bg-gold-500/50" />
+              O Método
+            </span>
+            <h2 className="font-serif text-3xl md:text-5xl leading-[1.2] text-white mb-8">
+              A Anatomia de uma Avaliação
+            </h2>
+            <p className="text-gray-400 font-light leading-relaxed mb-10">
+              Marcas exigentes precisam de avaliações técnicas, não apenas "cheira bem". Meu protocolo de análise desconstrói a fragrância para extrair sua verdadeira essência:
+            </p>
+            <div className="flex flex-col gap-8">
+              {[
+                { step: "01", title: "Abertura & Topo", desc: "A primeira impressão e o frescor nos primeiros 15 minutos." },
+                { step: "02", title: "Evolução & Corpo", desc: "A verdadeira identidade química após 2 horas na pele." },
+                { step: "03", title: "Fundo & Fixação", desc: "A memória olfativa e as madeiras que permanecem na roupa." },
+                { step: "04", title: "Silagem & Projeção", desc: "A aura, o rastro e como o perfume domina o ambiente." }
+              ].map((item, idx) => (
+                <div key={idx} className="flex gap-6 items-start group">
+                  <span className="font-serif text-2xl text-gold-500/50 group-hover:text-gold-500 transition-colors">{item.step}</span>
+                  <div>
+                    <h4 className="text-white text-lg font-serif mb-2">{item.title}</h4>
+                    <p className="text-gray-400 text-sm font-light">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Visão B2B */}
+          <div className="w-full md:w-1/2 flex flex-col justify-center bg-black-800 p-8 md:p-16 border border-white/5 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gold-500/5 blur-[100px] pointer-events-none" />
+            <span className="text-gold-500 tracking-[0.3em] text-xs uppercase mb-6">A Visão Comercial</span>
+            <h3 className="font-serif text-3xl md:text-4xl text-white mb-6">Por que associar sua marca?</h3>
+            <p className="text-gray-400 font-light leading-relaxed mb-6">
+              Na era do hype vazio, os consumidores não querem apenas ver um produto, eles querem entender a arte por trás dele. 
+            </p>
+            <p className="text-gray-400 font-light leading-relaxed">
+              Meu papel é traduzir a complexidade do seu perfume em desejo real. Eu não faço propaganda genérica, eu crio educação olfativa que gera conversão para um público altamente qualificado e disposto a investir em qualidade.
+            </p>
+          </div>
+
         </div>
       </section>
 
