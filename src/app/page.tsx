@@ -96,7 +96,7 @@ export default function Home() {
             <a 
               href="#parcerias" 
               onClick={(e) => scrollToSection(e, "#parcerias")}
-              className="px-6 py-2.5 bg-white text-black uppercase tracking-widest text-xs font-semibold hover:bg-gray-200 transition-colors"
+              className="px-6 py-2.5 bg-gold-500 text-black shadow-[0_0_15px_rgba(212,175,55,0.2)] hover:bg-gold-400 uppercase tracking-widest text-xs font-semibold  transition-colors"
             >
               Contato Comercial
             </a>
@@ -129,7 +129,7 @@ export default function Home() {
               <a 
                 href="#parcerias"
                 onClick={(e) => scrollToSection(e, "#parcerias")}
-                className="mt-8 px-8 py-4 bg-white text-black uppercase tracking-widest text-sm font-semibold w-full text-center"
+                className="mt-8 px-8 py-4 bg-gold-500 text-black shadow-[0_0_15px_rgba(212,175,55,0.2)] hover:bg-gold-400 uppercase tracking-widest text-sm font-semibold w-full text-center"
               >
                 Contato Comercial
               </a>
@@ -199,10 +199,10 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto"
             >
-              <a href="#parcerias" onClick={(e) => scrollToSection(e, "#parcerias")} className="group flex items-center justify-center gap-3 px-8 py-4 bg-white text-black uppercase tracking-widest text-xs font-semibold hover:bg-gray-200 transition-colors w-full sm:w-auto">
+              <a href="#parcerias" onClick={(e) => scrollToSection(e, "#parcerias")} className="group flex items-center justify-center gap-3 px-8 py-4 bg-gold-500 text-black shadow-[0_0_15px_rgba(212,175,55,0.2)] hover:bg-gold-400 uppercase tracking-widest text-xs font-semibold  transition-colors w-full sm:w-auto">
                 Associar Minha Marca <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#parcerias" onClick={(e) => scrollToSection(e, "#parcerias")} className="group flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 text-white uppercase tracking-widest text-xs font-semibold hover:border-white transition-colors w-full sm:w-auto">
+              <a href="#parcerias" onClick={(e) => scrollToSection(e, "#parcerias")} className="group flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 text-white uppercase tracking-widest text-xs font-semibold hover:border-gold-500 hover:text-gold-500 transition-colors w-full sm:w-auto">
                 Falar com Assessoria
               </a>
             </motion.div>
@@ -243,19 +243,19 @@ export default function Home() {
       <section className="relative z-20 bg-black border-t border-b border-white/5 py-12">
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center divide-x-0 md:divide-x divide-white/5">
           <div className="flex flex-col items-center justify-center">
-            <span className="text-3xl md:text-4xl font-serif text-white mb-2">+1000</span>
+            <span className="text-3xl md:text-4xl font-serif text-gold-500 mb-2">+1000</span>
             <span className="text-gray-500 uppercase tracking-widest text-[10px]">Perfumes Analisados</span>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <span className="text-3xl md:text-4xl font-serif text-white mb-2">+2M</span>
+            <span className="text-3xl md:text-4xl font-serif text-gold-500 mb-2">+2M</span>
             <span className="text-gray-500 uppercase tracking-widest text-[10px]">Visualizações Mensais</span>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <span className="text-3xl md:text-4xl font-serif text-white mb-2">Premium</span>
+            <span className="text-3xl md:text-4xl font-serif text-gold-500 mb-2">Premium</span>
             <span className="text-gray-500 uppercase tracking-widest text-[10px]">Nacionais & Importados</span>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <span className="text-3xl md:text-4xl font-serif text-white mb-2">Lifestyle</span>
+            <span className="text-3xl md:text-4xl font-serif text-gold-500 mb-2">Lifestyle</span>
             <span className="text-gray-500 uppercase tracking-widest text-[10px]">Audiência Engajada</span>
           </div>
         </div>
@@ -362,7 +362,7 @@ export default function Home() {
               ))}
             </div>
 
-            <a href="#parcerias" onClick={(e) => scrollToSection(e, "#parcerias")} className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black uppercase tracking-widest text-xs font-semibold hover:bg-gray-200 transition-colors self-start">
+            <a href="#parcerias" onClick={(e) => scrollToSection(e, "#parcerias")} className="inline-flex items-center gap-3 px-8 py-4 bg-gold-500 text-black shadow-[0_0_15px_rgba(212,175,55,0.2)] hover:bg-gold-400 uppercase tracking-widest text-xs font-semibold  transition-colors self-start">
               Falar com Assessoria <ArrowRight size={16} />
             </a>
           </motion.div>
@@ -453,10 +453,10 @@ export default function Home() {
             Associe sua marca a uma autoridade do universo da perfumaria e conecte seu produto ao público certo.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center w-full sm:w-auto">
-            <a href="mailto:contato@gabrielcorreia.com" className="px-10 py-5 bg-white text-black text-sm uppercase tracking-widest font-semibold hover:bg-gray-200 transition-colors w-full sm:w-auto">
+            <a href="mailto:contato@gabrielcorreia.com" className="px-10 py-5 bg-gold-500 text-black shadow-[0_0_15px_rgba(212,175,55,0.2)] hover:bg-gold-400 text-sm uppercase tracking-widest font-semibold  transition-colors w-full sm:w-auto">
               Assessoria Comercial
             </a>
-            <a href="#" className="px-10 py-5 bg-transparent border border-white/20 text-white text-sm uppercase tracking-widest font-semibold hover:border-white transition-colors w-full sm:w-auto flex items-center justify-center gap-3">
+            <a href="#" className="px-10 py-5 bg-transparent border border-white/20 text-white text-sm uppercase tracking-widest font-semibold hover:border-gold-500 hover:text-gold-500 transition-colors w-full sm:w-auto flex items-center justify-center gap-3">
               <InstagramIcon size={18} /> Instagram
             </a>
           </div>
