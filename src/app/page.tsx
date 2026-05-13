@@ -12,56 +12,92 @@ export default function Home() {
     offset: ["start start", "end end"],
   });
 
-  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+  const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+  const bgOpacity = useTransform(scrollYProgress, [0, 0.2], [0.4, 0]);
 
   return (
     <main ref={containerRef} className="relative min-h-[200vh] bg-black-900">
-      {/* 1. MASSIVE TYPOGRAPHIC HERO */}
-      <section className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden">
-        <motion.div
-          style={{ y: heroY, opacity: heroOpacity }}
-          className="relative z-10 flex flex-col items-center justify-center w-full px-4"
+      
+      {/* 1. DYNAMIC HERO */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black-900">
+        
+        {/* Dynamic Background with the Perfume Spray */}
+        <motion.div 
+          style={{ scale: bgScale, opacity: bgOpacity }}
+          className="absolute inset-0 z-0 origin-center"
         >
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="text-gold-500 tracking-[0.3em] text-xs md:text-sm uppercase font-sans mb-6"
-          >
-            Curadoria Exclusiva
-          </motion.span>
-          
-          <motion.h1
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="font-serif text-6xl md:text-[10vw] leading-[0.8] text-center text-white font-semibold tracking-tighter"
-          >
-            GABRIEL <br /> CORREIA
-          </motion.h1>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="mt-12 md:mt-24 w-full max-w-sm"
-          >
-            <p className="text-gray-400 text-center font-sans font-light text-sm md:text-base leading-relaxed">
-              O perfume é a sua assinatura invisível. <br />
-              Uma seleção rigorosa, sem hype, focada em essência e presença.
-            </p>
-          </motion.div>
+          <Image
+            src="/fotos/IMG_1626.JPG"
+            alt="Perfume Mist"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Overlay gradient to blend background into the content smoothly */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black-900/60 via-black-900/80 to-black-900" />
         </motion.div>
 
-        {/* Abstract Dark Overlay Elements for Depth */}
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] md:w-[40vw] md:h-[40vw] rounded-full bg-gold-600/5 blur-[120px]" />
+        {/* Hero Content: Editorial Layout */}
+        <div className="relative z-10 w-full max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between pt-20">
+          
+          {/* Typography */}
+          <motion.div
+            style={{ y: heroY }}
+            className="w-full md:w-[55%] flex flex-col items-start z-20"
+          >
+            <motion.span
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+              className="text-gold-500 tracking-[0.3em] text-xs md:text-sm uppercase font-sans mb-6 flex items-center gap-4"
+            >
+              <span className="w-12 h-[1px] bg-gold-500/50" />
+              Curadoria Exclusiva
+            </motion.span>
+            
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className="font-serif text-6xl md:text-8xl lg:text-[8vw] leading-[0.85] text-white font-semibold tracking-tighter"
+            >
+              GABRIEL <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">CORREIA</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.8 }}
+              className="mt-8 text-gray-400 font-sans font-light text-sm md:text-base leading-relaxed max-w-md"
+            >
+              O perfume é a sua assinatura invisível. Uma seleção rigorosa, sem hype, focada em verdadeira essência e presença de alto nível.
+            </motion.p>
+          </motion.div>
+
+          {/* Authority Portrait Image */}
+          <motion.div
+             initial={{ opacity: 0, scale: 0.9, x: 20 }}
+             animate={{ opacity: 1, scale: 1, x: 0 }}
+             transition={{ duration: 1.5, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+             className="w-full md:w-[35%] mt-12 md:mt-0 relative aspect-[3/4] md:aspect-[4/5] overflow-hidden bg-black-800 border border-white/5 shadow-2xl"
+          >
+            <Image
+              src="/fotos/IMG_1677.JPG"
+              alt="Gabriel Correia"
+              fill
+              className="object-cover object-top grayscale-[30%] hover:grayscale-0 transition-all duration-1000 hover:scale-105"
+              priority
+            />
+            {/* Inner vignette for premium depth */}
+            <div className="absolute inset-0 shadow-[inset_0_0_100px_rgba(0,0,0,0.8)] pointer-events-none" />
+          </motion.div>
+
         </div>
       </section>
 
       {/* 2. THE FRAGMENTED GALLERY (Z-index above sticky) */}
-      <section className="relative z-20 bg-black-800 pt-32 pb-48 px-6 md:px-12 border-t border-white/5">
+      <section className="relative z-20 bg-black-900 pt-32 pb-48 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           
           <div className="flex flex-col md:flex-row justify-between items-end mb-24">
@@ -85,8 +121,8 @@ export default function Home() {
             >
               <div className="relative aspect-[4/5] overflow-hidden bg-black-900 border border-white/5">
                 <Image
-                  src="/fotos/IMG_1589.JPG"
-                  alt="Perfume Exclusivo"
+                  src="/fotos/IMG_1625.JPG"
+                  alt="Perfume Assinatura"
                   fill
                   className="object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:opacity-80"
                 />
@@ -109,12 +145,12 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="md:col-span-5 md:mt-48 group cursor-pointer"
             >
-              <div className="relative aspect-square overflow-hidden bg-black-900 border border-white/5">
+              <div className="relative aspect-[3/4] overflow-hidden bg-black-900 border border-white/5">
                 <Image
-                  src="/fotos/IMG_1590.JPG"
+                  src="/fotos/IMG_1605.JPG"
                   alt="Perfume Noturno"
                   fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:opacity-80 grayscale group-hover:grayscale-0"
+                  className="object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:opacity-80"
                 />
               </div>
               <div className="mt-6 flex justify-between items-center">
@@ -135,10 +171,10 @@ export default function Home() {
             >
               <div className="relative aspect-[21/9] overflow-hidden bg-black-900 border border-white/5">
                 <Image
-                  src="/fotos/IMG_1595.JPG"
-                  alt="Perfume Premium"
+                  src="/fotos/IMG_1640.JPG"
+                  alt="Perfume Premium Obras Primas"
                   fill
-                  className="object-cover transition-transform duration-1000 group-hover:scale-105 group-hover:opacity-80"
+                  className="object-cover object-top transition-transform duration-1000 group-hover:scale-105 group-hover:opacity-80"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <span className="text-gold-500 font-sans tracking-[0.2em] uppercase text-sm border border-gold-500/50 px-8 py-3 bg-black/50 backdrop-blur-sm">
