@@ -39,8 +39,8 @@ export default function Home() {
 
   const navLinks = [
     { name: "A Coleção", href: "#colecao" },
-    { name: "Filosofia", href: "#filosofia" },
-    { name: "Consultoria", href: "#consultoria" },
+    { name: "A História", href: "#historia" },
+    { name: "Parcerias", href: "#parcerias" },
   ];
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -76,11 +76,11 @@ export default function Home() {
               </a>
             ))}
             <a 
-              href="#consultoria"
-              onClick={(e) => scrollToSection(e, "#consultoria")}
+              href="#parcerias"
+              onClick={(e) => scrollToSection(e, "#parcerias")}
               className="ml-4 text-xs uppercase tracking-widest text-black-900 bg-gold-500 px-6 py-2.5 hover:bg-gold-400 transition-colors"
             >
-              Agendar Sessão
+              Contato Comercial
             </a>
           </nav>
 
@@ -154,7 +154,7 @@ export default function Home() {
               className="text-gold-500 tracking-[0.3em] text-xs md:text-sm uppercase font-sans mb-6 flex items-center gap-4 mt-8 md:mt-0"
             >
               <span className="w-12 h-[1px] bg-gold-500/50" />
-              Curadoria Exclusiva
+              Especialista em Perfumaria
             </motion.span>
             
             <motion.h1
@@ -172,7 +172,7 @@ export default function Home() {
               transition={{ duration: 1, delay: 0.8 }}
               className="mt-8 text-gray-400 font-sans font-light text-sm md:text-base leading-relaxed max-w-md"
             >
-              O perfume é a sua assinatura invisível. Uma seleção rigorosa, sem hype, focada em verdadeira essência e presença de alto nível.
+              Colecionador apaixonado desde 2019. Mais de 1000 fragrâncias no acervo. Conheça a perfumaria sob a ótica de um especialista focado no que há de mais exclusivo e desejado no mundo.
             </motion.p>
           </motion.div>
 
@@ -271,12 +271,12 @@ export default function Home() {
               className="md:col-span-12 mt-32 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
             >
               <div className="order-2 md:order-1 flex flex-col items-start pr-0 md:pr-12">
-                <h3 className="font-serif text-3xl md:text-5xl text-white mb-6">Obras Primas</h3>
+                <h3 className="font-serif text-3xl md:text-5xl text-white mb-6">Os Mais Disputados</h3>
                 <p className="text-gray-400 font-sans font-light leading-relaxed mb-8">
-                  Nossa seleção de maior prestígio. Fragrâncias raras, ingredientes absolutos e frascos que transcendem o design. Cada gota é uma declaração de excelência incomparável.
+                  Meu acervo privado com o que há de mais exclusivo no mundo. Fragrâncias raras, ingredientes absolutos e edições limitadas que poucos têm acesso.
                 </p>
-                <a href="#consultoria" onClick={(e) => scrollToSection(e, "#consultoria")} className="flex items-center gap-4 text-gold-500 uppercase tracking-widest text-sm hover:gap-6 transition-all group">
-                  Explorar Seleção <ArrowRight size={16} className="group-hover:text-white transition-colors" />
+                <a href="#parcerias" onClick={(e) => scrollToSection(e, "#parcerias")} className="flex items-center gap-4 text-gold-500 uppercase tracking-widest text-sm hover:gap-6 transition-all group">
+                  Ver Acervo Completo <ArrowRight size={16} className="group-hover:text-white transition-colors" />
                 </a>
               </div>
               <div className="order-1 md:order-2 relative aspect-[3/4] md:aspect-[4/5] overflow-hidden bg-black-800 border border-white/5 group">
@@ -293,8 +293,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- 3. FILOSOFIA --- */}
-      <section id="filosofia" className="relative z-20 bg-black-900 py-32 px-6 md:px-12 border-t border-white/5">
+      {/* --- 3. A HISTÓRIA --- */}
+      <section id="historia" className="relative z-20 bg-black-900 py-32 px-6 md:px-12 border-t border-white/5">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-24">
           <motion.div 
             initial={{ opacity: 0, x: -40 }}
@@ -319,38 +319,83 @@ export default function Home() {
           >
             <span className="flex items-center gap-4 text-gold-500 tracking-[0.3em] text-xs uppercase mb-8">
               <span className="w-8 h-[1px] bg-gold-500/50" />
-              A Visão
+              Desde 2019
             </span>
             <h2 className="font-serif text-3xl md:text-5xl leading-[1.2] text-white mb-8">
-              "A verdadeira exclusividade não grita, ela é sentida. Eu rejeito o hype para focar na essência."
+              "A arte não é apenas ter o perfume mais exclusivo, é saber exatamente o que usar para dominar cada ambiente."
             </h2>
             <p className="text-gray-400 font-light leading-relaxed mb-6">
-              O mercado está saturado de tendências passageiras e perfumes que todos usam. Minha missão como curador não é te vender um frasco genérico, mas sim entregar uma identidade olfativa que chegue antes de você e permaneça muito depois que você for.
+              O que começou como uma paixão em 2019 se transformou em uma verdadeira jornada olfativa. Hoje, com um acervo de mais de 1000 fragrâncias, minha missão é explorar o universo da perfumaria de nicho e entender o que cada gota pode comunicar.
             </p>
             <p className="text-gray-400 font-light leading-relaxed">
-              Cada peça do nosso acervo passa por uma avaliação rigorosa de performance, projeção e, acima de tudo, exclusividade narrativa.
+              O mercado está saturado de tendências passageiras. Como especialista, eu rejeito o hype para focar no que realmente constrói uma assinatura inesquecível e ajuda marcas a se conectarem com um público exigente.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* --- 4. CONSULTORIA OLFATIVA --- */}
-      <section id="consultoria" className="relative z-20 bg-black-800 py-32 px-6 md:px-12 border-t border-white/5 overflow-hidden">
+      {/* --- 4. A CIÊNCIA DA COMBINAÇÃO --- */}
+      <section id="ciencia" className="relative z-20 bg-black-900 py-32 px-6 md:px-12 border-t border-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-20">
+            <span className="text-gold-500 tracking-[0.3em] text-xs uppercase mb-6 block">A Arte de Vestir um Perfume</span>
+            <h2 className="font-serif text-4xl md:text-5xl text-white mb-6">A Ciência da Combinação</h2>
+            <p className="text-gray-400 font-light max-w-2xl mx-auto text-sm md:text-base">
+              Não existe o "melhor perfume do mundo". Existe a fragrância exata para o momento exato. Entender a temperatura, a ocasião e a intenção é o que separa um usuário comum de alguém inesquecível.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Business & Reuniões",
+                desc: "Fragrâncias limpas, amadeiradas e aromáticas que transmitem confiança, sobriedade e autoridade sem invadir o espaço alheio."
+              },
+              {
+                title: "Encontros & Sedução",
+                desc: "Notas quentes, especiadas e levemente adocicadas. O objetivo é criar magnetismo, mistério e proximidade."
+              },
+              {
+                title: "Assinatura Diária",
+                desc: "Aquele perfume que se torna a sua segunda pele. Versátil, elegante e que faz com que as pessoas sempre lembrem da sua presença."
+              }
+            ].map((item, idx) => (
+              <motion.div 
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: idx * 0.2 }}
+                className="group relative bg-black-800 border border-white/5 p-8 hover:border-gold-500/30 transition-colors"
+              >
+                <h3 className="font-serif text-2xl text-white mb-4 group-hover:text-gold-500 transition-colors">{item.title}</h3>
+                <p className="text-gray-400 font-light text-sm leading-relaxed">{item.desc}</p>
+                
+                {/* Decorative Element */}
+                <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-gold-500/0 via-gold-500/0 to-gold-500/0 group-hover:via-gold-500/50 transition-all duration-700" />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* --- 5. PARCERIAS B2B --- */}
+      <section id="parcerias" className="relative z-20 bg-black-800 py-32 px-6 md:px-12 border-t border-white/5 overflow-hidden">
         {/* Subtle background glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] md:w-[60vw] h-[90vw] md:h-[60vw] rounded-full bg-gold-600/5 blur-[120px] pointer-events-none" />
         
         <div className="relative max-w-4xl mx-auto text-center flex flex-col items-center">
-          <span className="text-gold-500 tracking-[0.3em] text-xs uppercase mb-6">Atendimento Exclusivo</span>
-          <h2 className="font-serif text-4xl md:text-6xl text-white mb-8">Consultoria Privada</h2>
+          <span className="text-gold-500 tracking-[0.3em] text-xs uppercase mb-6">Para Marcas & Agências</span>
+          <h2 className="font-serif text-4xl md:text-6xl text-white mb-8">Parcerias & Divulgação</h2>
           <p className="text-gray-400 font-light leading-relaxed mb-12 max-w-2xl text-sm md:text-base">
-            Uma consultoria para definir sua assinatura olfativa pessoal. Avaliamos seu perfil, rotina e o impacto exato que você deseja causar, recomendando as obras primas perfeitas para a sua pele.
+            Quer divulgar sua marca com quem realmente entende do assunto? Posicione seu produto com autoridade. Eu falo diretamente com um público extremamente exigente que consome perfumaria de alto nível.
           </p>
           <a 
             href="#" 
             className="group relative px-8 md:px-12 py-4 md:py-5 bg-gold-500 text-black-900 uppercase tracking-widest text-xs md:text-sm font-semibold overflow-hidden transition-all hover:bg-gold-400 shadow-[0_0_40px_rgba(212,175,55,0.2)] hover:shadow-[0_0_60px_rgba(212,175,55,0.4)]"
           >
             <span className="relative z-10 flex items-center gap-3">
-              Agendar Consultoria <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              Contato Comercial <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </span>
           </a>
         </div>
@@ -364,7 +409,7 @@ export default function Home() {
               GC<span className="text-gold-500">.</span>
             </Link>
             <p className="text-gray-400 font-light max-w-sm text-sm leading-relaxed mb-8">
-              Curadoria de alta perfumaria focada em exclusividade e impacto presencial para indivíduos extremamente exigentes.
+              Portfólio do maior acervo privado e especialista em perfumaria de nicho focado no mercado de alta exigência.
             </p>
           </div>
           
@@ -386,7 +431,7 @@ export default function Home() {
             <ul className="flex flex-col gap-4">
               <li>
                 <a href="#" className="text-gray-500 hover:text-gold-500 font-light text-sm transition-colors flex items-center gap-3">
-                  <Phone size={16} className="text-white/30" /> Consultoria Exclusiva
+                  <Phone size={16} className="text-white/30" /> Contato Comercial
                 </a>
               </li>
               <li>

@@ -13,8 +13,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Gabriel Correia | Perfumes",
-  description: "Curadoria exclusiva e premium de perfumes.",
+  title: "Gabriel Correia | Especialista em Perfumaria",
+  description: "Colecionador e especialista em perfumaria de nicho desde 2019. Mais de 1000 fragrâncias no acervo.",
 };
 
 export default function RootLayout({
