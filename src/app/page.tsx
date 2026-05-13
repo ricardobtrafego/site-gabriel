@@ -3,7 +3,26 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
-import { ArrowRight, Menu, X, Instagram, Mail, Phone } from "lucide-react";
+import { ArrowRight, Menu, X, Mail, Phone } from "lucide-react";
+
+const InstagramIcon = ({ size = 24, className = "" }: { size?: number, className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
 import Link from "next/link";
 
 export default function Home() {
@@ -372,7 +391,7 @@ export default function Home() {
               </li>
               <li>
                 <a href="#" className="text-gray-500 hover:text-gold-500 font-light text-sm transition-colors flex items-center gap-3">
-                  <Instagram size={16} className="text-white/30" /> @gabrielcorreia
+                  <InstagramIcon size={16} className="text-white/30" /> @gabrielcorreia
                 </a>
               </li>
               <li>
