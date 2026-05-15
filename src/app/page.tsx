@@ -37,7 +37,7 @@ const nicheBrands = [
   "Parfums de Marly", "Roja", "Sospiro", "Xerjoff",
 ];
 
-type Lang = "pt" | "en" | "ar";
+type Lang = "pt" | "en" | "ar" | "fr" | "es";
 
 const translations = {
   pt: {
@@ -172,6 +172,138 @@ const translations = {
     footer: { rights: "All rights reserved." },
   },
 
+  fr: {
+    nav: { identity: "Identité", collection: "La Collection", b2b: "Partenariats B2B", contact: "Contact Commercial" },
+    hero: {
+      tagline: "Gabriel Correia",
+      h1: "Spécialiste en parfums et référence en fragrances qui créent une présence.",
+      sub: "Analyses authentiques, expériences olfactives et contenus qui connectent les marques premium à un public passionné par la sophistication, l'identité et la performance.",
+      cta1: "Associer Ma Marque",
+      cta2: "Parler à l'Équipe",
+    },
+    authority: {
+      s1: "+1000", l1: "Parfums Analysés",
+      s2: "+2M",  l2: "Vues Mensuelles",
+      s3: "Premium", l3: "Nationaux & Importés",
+      s4: "Lifestyle", l4: "Audience Engagée",
+    },
+    identity: {
+      quote: '"Le parfum n\'est pas qu\'un arôme. C\'est une présence. C\'est un souvenir."',
+      p1: "C'est la façon dont les gens se souviennent de vous avant que vous parliez et après que vous partiez.",
+      p2: "Gabriel Correia est devenu une référence dans l'univers de la parfumerie en traduisant les fragrances en expériences réelles, aidant les gens à trouver le parfum idéal pour les rendez-vous, les événements, les affaires et les moments inoubliables.",
+      p3: "Avec une collection exclusive et une vaste connaissance technique, son contenu unit sophistication, authenticité et véritable influence commerciale.",
+    },
+    sensorial: {
+      eyebrow: "La Science de l'Évaluation",
+      h2: "Spécialiste en fragrances\nqui éveillent les sens.",
+      cards: [
+        { title: "Pour les Rendez-vous",  desc: "Fragrances enveloppantes, épicées et marquantes pour créer du magnétisme et de la présence." },
+        { title: "Pour le Quotidien",     desc: "Élégance, fraîcheur et polyvalence. La signature personnelle qui vous accompagne." },
+        { title: "Pour la Nuit",          desc: "Performance extrême, projection intense et impact absolu sur l'environnement." },
+        { title: "De Luxe (Niche)",       desc: "Expériences exclusives, absolus purs pour ceux qui valorisent la plus haute sophistication." },
+      ],
+    },
+    b2b: {
+      h2: "Votre marque connectée\nau bon public.",
+      p1: "Les marques qui cherchent positionnement, désir et autorité trouvent en Gabriel Correia un partenaire stratégique pour les campagnes, les lancements et la promotion de produits.",
+      p2: "Son public suit de vraies recommandations, des expériences authentiques et des contenus qui influencent les décisions d'achat. L'association de votre marque avec un spécialiste reconnu renforce la perception premium, la confiance et la portée qualifiée.",
+      services: ["Campagnes", "Lancements", "Sponsorisé", "Ambassadeur", "Critiques", "Positionnement"],
+      cta: "Parler à l'Équipe",
+    },
+    collection: {
+      h2: "Une collection construite\navec expérience.",
+      sub: "Les chefs-d'œuvre de la parfumerie mondiale, des classiques absolus aux formulations rares de niche.",
+      d1: {
+        eyebrow: "Marques Premium",
+        h3: "Le Standard du Niche",
+        p: "L'excellence n'accepte pas les raccourcis. La collection présente les plus grandes maisons de la parfumerie de niche, où la liberté créative totale donne lieu à des compositions uniques. Creed, Amouage, Xerjoff, Clive Christian et Roja définissent le sommet de la pyramide olfactive.",
+      },
+      d2: {
+        eyebrow: "Nouvelles Frontières",
+        h3: "Parfumerie Arabe & Discontinuée",
+        p: "Pour maîtriser le marché, il faut aller au-delà de l'évident. La parfumerie orientale a porté la puissance et le luxe à un nouveau niveau. La collection abrite également des formulations vintage rares et des flacons discontinués qui servent de base d'étude pour comprendre ce qui innove vraiment aujourd'hui.",
+      },
+    },
+    influence: {
+      h2: "Une influence construite avec authenticité.",
+      p: "Avec des contenus axés sur l'univers de la parfumerie masculine et féminine, Gabriel Correia partage des analyses, des tendances et des recommandations qui aident des milliers de personnes à trouver des fragrances qui correspondent à leur personnalité.",
+      tags: ["Expérience", "Lifestyle", "Élégance", "Influence Réelle"],
+    },
+    cta: {
+      h2: "Transformez votre marque en désir.",
+      p: "Associez votre marque à une autorité dans l'univers de la parfumerie et connectez votre produit au bon public.",
+      btn1: "Conseil Commercial",
+      btn2: "Instagram",
+    },
+    footer: { rights: "Tous droits réservés." },
+  },
+
+  es: {
+    nav: { identity: "Identidad", collection: "La Colección", b2b: "Asociaciones B2B", contact: "Contacto Comercial" },
+    hero: {
+      tagline: "Gabriel Correia",
+      h1: "Especialista en perfumes y referente en fragancias que crean presencia.",
+      sub: "Reseñas auténticas, experiencias olfativas y contenido que conecta marcas premium con audiencias apasionadas por la sofisticación, la identidad y el rendimiento.",
+      cta1: "Asociar Mi Marca",
+      cta2: "Hablar con Asesoría",
+    },
+    authority: {
+      s1: "+1000", l1: "Perfumes Analizados",
+      s2: "+2M",  l2: "Vistas Mensuales",
+      s3: "Premium", l3: "Nacionales & Importados",
+      s4: "Lifestyle", l4: "Audiencia Comprometida",
+    },
+    identity: {
+      quote: '"El perfume no es solo un aroma. Es presencia. Es memoria."',
+      p1: "Es la forma en que las personas te recuerdan antes de que hables y después de que te vayas.",
+      p2: "Gabriel Correia se ha convertido en referente en el universo de la perfumería al traducir fragancias en experiencias reales, ayudando a las personas a encontrar el perfume ideal para citas, eventos, negocios y momentos inolvidables.",
+      p3: "Con una colección exclusiva y amplio conocimiento técnico, su contenido une sofisticación, autenticidad y verdadera influencia comercial.",
+    },
+    sensorial: {
+      eyebrow: "La Ciencia de la Evaluación",
+      h2: "Especialista en fragancias\nque despiertan los sentidos.",
+      cards: [
+        { title: "Para Citas",         desc: "Fragancias envolventes, especiadas y llamativas para crear magnetismo y presencia." },
+        { title: "Para el Día a Día",  desc: "Elegancia, frescura y versatilidad. La firma personal que te acompaña." },
+        { title: "Para la Noche",      desc: "Rendimiento extremo, proyección intensa e impacto absoluto en el ambiente." },
+        { title: "De Lujo (Nicho)",    desc: "Experiencias exclusivas, absolutos puros para quienes valoran la más alta sofisticación." },
+      ],
+    },
+    b2b: {
+      h2: "Tu marca conectada\ncon la audiencia correcta.",
+      p1: "Las marcas que buscan posicionamiento, deseo y autoridad encuentran en Gabriel Correia un socio estratégico para campañas, lanzamientos y promoción de productos.",
+      p2: "Su audiencia sigue recomendaciones reales, experiencias auténticas y contenido que influye en las decisiones de compra. Asociar tu marca con un especialista reconocido fortalece la percepción premium, la confianza y el alcance cualificado.",
+      services: ["Campañas", "Lanzamientos", "Patrocinado", "Embajador", "Reseñas", "Posicionamiento"],
+      cta: "Hablar con Asesoría",
+    },
+    collection: {
+      h2: "Una colección construida\ncon experiencia.",
+      sub: "Las obras maestras de la perfumería mundial, desde los clásicos absolutos hasta las formulaciones raras de nicho.",
+      d1: {
+        eyebrow: "Marcas Premium",
+        h3: "El Estándar del Nicho",
+        p: "La excelencia no admite atajos. La colección presenta las mejores casas de la perfumería de nicho, donde la libertad creativa total da lugar a composiciones únicas. Creed, Amouage, Xerjoff, Clive Christian y Roja definen la cima de la pirámide olfativa.",
+      },
+      d2: {
+        eyebrow: "Nuevas Fronteras",
+        h3: "Perfumería Árabe & Descontinuados",
+        p: "Para dominar el mercado, hay que ir más allá de lo obvio. La perfumería oriental llevó la potencia y el lujo a un nuevo nivel. Además, la colección alberga formulaciones vintage raras y frascos descontinuados que sirven de base de estudio para entender qué innova de verdad hoy.",
+      },
+    },
+    influence: {
+      h2: "Influencia construida con autenticidad.",
+      p: "Con contenido enfocado en el universo de la perfumería masculina y femenina, Gabriel Correia comparte análisis, tendencias y recomendaciones que ayudan a miles de personas a encontrar fragancias que combinan con su personalidad.",
+      tags: ["Experiencia", "Lifestyle", "Elegancia", "Influencia Real"],
+    },
+    cta: {
+      h2: "Transforma tu marca en deseo.",
+      p: "Asocia tu marca con una autoridad en el universo de la perfumería y conecta tu producto con la audiencia correcta.",
+      btn1: "Asesoría Comercial",
+      btn2: "Instagram",
+    },
+    footer: { rights: "Todos los derechos reservados." },
+  },
+
   ar: {
     nav: { identity: "الهوية", collection: "المجموعة", b2b: "شراكات الأعمال", contact: "التواصل التجاري" },
     hero: {
@@ -239,8 +371,8 @@ const translations = {
   },
 };
 
-const flags: Record<Lang, string> = { pt: "🇧🇷", en: "🇬🇧", ar: "🇦🇪" };
-const labels: Record<Lang, string> = { pt: "PT", en: "EN", ar: "AR" };
+const flags: Record<Lang, string> = { pt: "🇧🇷", en: "🇬🇧", ar: "🇦🇪", fr: "🇫🇷", es: "🇪🇸" };
+const labels: Record<Lang, string> = { pt: "PT", en: "EN", ar: "AR", fr: "FR", es: "ES" };
 
 function renderLines(text: string) {
   return text.split("\n").map((line, i, arr) => (
@@ -294,18 +426,18 @@ export default function Home() {
   };
 
   const LangSwitcher = ({ className = "" }: { className?: string }) => (
-    <div className={`flex items-center gap-0.5 ${className}`}>
-      {(["pt", "en", "ar"] as Lang[]).map((l) => (
+    <div className={`flex items-center gap-0 ${className}`}>
+      {(["pt", "en", "ar", "fr", "es"] as Lang[]).map((l) => (
         <button
           key={l}
           onClick={() => setLang(l)}
-          className={`flex items-center gap-1 px-2 py-1 text-[10px] uppercase tracking-widest font-medium rounded transition-colors ${
+          className={`flex items-center gap-0.5 px-1.5 py-1 text-[10px] uppercase tracking-wide font-medium rounded transition-colors ${
             lang === l
               ? "text-gold-500"
               : "text-gray-600 hover:text-gray-300"
           }`}
         >
-          <span className="text-sm leading-none">{flags[l]}</span>
+          <span className="hidden sm:inline text-sm leading-none">{flags[l]}</span>
           <span>{labels[l]}</span>
         </button>
       ))}
